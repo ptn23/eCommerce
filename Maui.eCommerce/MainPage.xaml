@@ -12,7 +12,12 @@
             Text="Inventory Management"
                 Clicked="InventoryClicked"/>
             <Button
-            Text="Shop"/>
+            Text="Shop"
+                Clicked="ShopClicked"/>
+            <Button
+                Text="Adjusting Tax"
+                Clicked="TaxClicked"/>
+
         </VerticalStackLayout>
     </ScrollView>
 

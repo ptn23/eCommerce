@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="Maui.eCommerce.Views.ShoppingManagementView"
+              Title="ShoppingManagementView"
+              NavigatedTo="ContentPage_NavigatedTo">
+  
+    <Grid Grid.Column="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <ListView Grid.Row="0"
+              ItemsSource="{Binding Inventory}"
+              SelectedItem="{Binding SelectedItem}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="10*"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding Id}"/>
+                            <Label Grid.Column="1" Text="{Binding Product.Name}"/>
+                            <Label Grid.Column="2" Text="x"/>
+                            <Label Grid.Column="3" Text="{Binding Quantity}"/>
+                            <Label Grid.Column="4" Text="{Binding Price}"/>
+                            <Button Grid.Column="5" Text="+" Clicked="EditAmount" CommandParameter="{Binding .}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <HorizontalStackLayout Grid.Row="1" Spacing="10" Padding="10">
+            <Button Text="Check Out" Clicked="CheckedOutClicked"/>
+            <Button Text="Your Shopping Cart" Clicked="ShoppingCartClicked"/>
+            <Button Text="Go Back" Clicked="CancelClicked"/>
+        </HorizontalStackLayout>
+    </Grid>
+
+</ContentPage>

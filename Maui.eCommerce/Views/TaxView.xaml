@@ -1,0 +1,15 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.eCommerce.Views.TaxView"
+             Title="TaxView"
+             NavigatedTo="ContentPage_NavigatedTo">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Enter Tax Rate (%)"/>
+            <Entry Text="{Binding taxAmount}" Keyboard="Numeric" />
+
+            <Button Text="Confirm" Clicked="ConfirmClicked"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

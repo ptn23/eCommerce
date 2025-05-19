@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Maui.eCommerce.ViewModels
 {
-    public class MainViewModel
+    public enum SortOption
     {
-        public string Display
-        {
-            get
-            {
-                return "Hello, World!";
-            }
-        }
+        Name,
+        Price
     }
 }

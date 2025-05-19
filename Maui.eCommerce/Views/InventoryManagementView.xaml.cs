@@ -1,3 +1,4 @@
+using Library.eCommerce.Models;
 using Library.eCommerce.Services;
 using Maui.eCommerce.ViewModels;
 
@@ -37,8 +38,16 @@ public partial class InventoryManagementView : ContentPage
         Shell.Current.GoToAsync($"//Product?productId={productId}");
     }
 
+    private void EditAmount(object sender, EventArgs e)
+    {
+        var button = sender as Button;
+        var item = button?.CommandParameter as Item;
+        (BindingContext as InventoryManagementViewModel)?.AddProduct(item);
+    }
+
     private void SearchClicked(object sender, EventArgs e)
     {
         (BindingContext as InventoryManagementViewModel)?.RefreshProductList();
     }
+    
 }
