@@ -51,8 +51,9 @@ Before running the application, ensure that you have:
 3. Follow the application's purchasing workflow.
 
 ## Walkthrough
-The following demonstration showcases the application's functionality (frontend, will update).
+The following demonstration showcases the application's functionality (frontend, will update backend later).
 
+Video Link: https://youtu.be/Z2qUmsz4HyY
 <img width="400" height="225" alt="C# Application Walkthrough" src="https://github.com/user-attachments/assets/c7ac5a3b-f49a-4f1f-a78e-bb5463242428" />
 
 ## Author
